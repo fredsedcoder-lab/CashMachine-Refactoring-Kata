@@ -9,9 +9,8 @@ class BranchFinder {
     }
 
     public boolean withdraw(String town, String customerName, BigDecimal cashAmount) {
-        return findBranchForTown(town)
-                .getPersonalAccounts()
-                .getAccountForCustomer(customerName)
-                .withdraw(cashAmount);
+        Branch branchForTown = findBranchForTown(town);
+        return branchForTown.withdraw(customerName, cashAmount);
     }
+
 }

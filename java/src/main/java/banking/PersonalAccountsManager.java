@@ -18,4 +18,9 @@ class PersonalAccountsManager {
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException("unknown customer " + customerName));
     }
+
+    public boolean withdraw(String customerName, BigDecimal cashAmount) {
+        return getAccountForCustomer(customerName)
+                .withdraw(cashAmount);
+    }
 }
