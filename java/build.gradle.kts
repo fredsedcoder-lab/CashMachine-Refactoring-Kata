@@ -2,6 +2,8 @@ plugins {
     java
 }
 
+layout.buildDirectory.set(file("target"))
+
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(25))
