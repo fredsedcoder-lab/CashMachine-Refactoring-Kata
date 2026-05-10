@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 class Branch {
     private final String name;
     private final String branchManager;
-    private final PersonalAccountsManager personalAccounts = new PersonalAccountsManager();
+    private final PersonalAccountsManager personalAccountsManager = new PersonalAccountsManager();
 
     public Branch(String name) {
         this.name = name;
@@ -20,12 +20,12 @@ class Branch {
         return branchManager;
     }
 
-    public PersonalAccountsManager getPersonalAccounts() {
-        return personalAccounts;
+    public PersonalAccountsManager getPersonalAccountsManager() {
+        return personalAccountsManager;
     }
 
     public boolean withdraw(String customerName, BigDecimal cashAmount) {
-        return personalAccounts.withdraw(customerName, cashAmount);
+        return personalAccountsManager.withdraw(customerName, cashAmount);
     }
 
 }
