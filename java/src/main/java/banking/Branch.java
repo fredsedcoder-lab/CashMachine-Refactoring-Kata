@@ -25,7 +25,6 @@ class Branch {
     }
 
     public boolean withdraw(String customerName, BigDecimal cashAmount) {
-        PersonalAccountsManager personalAccounts = getPersonalAccounts();
         return personalAccounts.withdraw(customerName, cashAmount);
     }
 

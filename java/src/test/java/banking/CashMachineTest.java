@@ -23,4 +23,10 @@ public class CashMachineTest {
         assertFalse(result);
     }
 
+    @Test
+    void withdraw_fails_when_amount_is_negative() {
+        boolean result = cashMachine.withdraw("Paris", "Arthur", BigDecimal.valueOf(-200));
+        assertFalse(result);
+    }
+
 }

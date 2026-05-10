@@ -3,10 +3,10 @@ package banking;
 import java.math.BigDecimal;
 
 class CashMachine {
-    private final BranchFinder branchFinder = new BranchFinder();
+    private final AccountAccess accountAccess = new AccountAccess();
 
     public boolean withdraw(String town, String customerName, BigDecimal cashAmount) {
-        return branchFinder.withdraw(town, customerName, cashAmount);
+        return accountAccess.withdraw(town, customerName, cashAmount);
     }
 
 }
